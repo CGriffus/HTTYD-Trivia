@@ -1,43 +1,46 @@
-<form #quizForm="ngForm" (ngSubmit)="submitForm(quizForm)">
-  <label for="username">Enter Your Name:</label>
-  <input type="text" name="username" ngModel />
-
-  <ol>
-    <li *ngFor="let question of questions; index as i">
-      <p>{{ question.question_name }}</p>
-      <label>
-        <input
-          type="radio"
-          name="{{ i }}"
-          value="{{ question.choice_1 }}"
-          ngModel
-        />{{ question.choice_1 }}</label
-      >
-      <label>
-        <input
-          type="radio"
-          name="{{ i }}"
-          value="{{ question.choice_2 }}"
-          ngModel
-        />{{ question.choice_2 }}</label
-      >
-      <label>
-        <input
-          type="radio"
-          name="{{ i }}"
-          value="{{ question.choice_3 }}"
-          ngModel
-        />{{ question.choice_3 }}</label
-      >
-      <label>
-        <input
-          type="radio"
-          name="{{ i }}"
-          value="{{ question.choice_4 }}"
-          ngModel
-        />{{ question.choice_4 }}</label
-      >
-    </li>
-  </ol>
-  <button>Submit</button>
-</form>
+<div id="main">
+  <form #quizForm="ngForm" (ngSubmit)="submitForm(quizForm)">
+    <div id="name">
+      <label id="username" for="username">Enter Your Name:</label>
+      <input id="username_input" type="text" name="username" ngModel />
+    </div>
+    <ol>
+      <li *ngFor="let question of questions; index as i">
+        <p>{{ question.question_name }}</p>
+        <label>
+          <input
+            type="radio"
+            name="{{ i }}"
+            value="{{ question.choice_1 }}"
+            ngModel
+          />{{ question.choice_1 }}</label
+        >
+        <label>
+          <input
+            type="radio"
+            name="{{ i }}"
+            value="{{ question.choice_2 }}"
+            ngModel
+          />{{ question.choice_2 }}</label
+        >
+        <label>
+          <input
+            type="radio"
+            name="{{ i }}"
+            value="{{ question.choice_3 }}"
+            ngModel
+          />{{ question.choice_3 }}</label
+        >
+        <label>
+          <input
+            type="radio"
+            name="{{ i }}"
+            value="{{ question.choice_4 }}"
+            ngModel
+          />{{ question.choice_4 }}</label
+        >
+      </li>
+    </ol>
+    <button>Submit</button>
+  </form>
+</div>

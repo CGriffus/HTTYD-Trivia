@@ -11,6 +11,7 @@ export class QuizComponent implements OnInit {
   username: string;
   questions: any[];
   score: number;
+  userScore: object;
   userResult: object;
 
   constructor(private quizService: QuizService) {}
@@ -22,14 +23,20 @@ export class QuizComponent implements OnInit {
   }
 
   submitForm(form: NgForm) {
-    this.userResult = this.quizService.calculateScore(
+    // this.userScore = this.quizService.calculateScore(
+    //   form.value,
+    //   this.questions,
+    //   form.value.username
+    // );
+    // console.log(this.userScore);
+    // this.quizService.postScores(this.userScore);
+
+    this.userResult = this.quizService.getResults(
       form.value,
       this.questions,
       form.value.username
     );
     console.log(this.userResult);
-    this.quizService.postScores(this.userResult);
-
     this.quizService.showResults();
   }
 }

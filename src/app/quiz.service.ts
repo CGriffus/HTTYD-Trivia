@@ -9,7 +9,9 @@ import { Router } from "@angular/router";
 export class QuizService {
   score: number = 0;
   username: string;
+  userScore: object;
   userResult: object;
+  answers: any;
 
   constructor(private http: HttpClient, private router: Router) {}
 
@@ -25,7 +27,7 @@ export class QuizService {
     return this.http
       .post("http://localhost:4000/scores", newScore)
       .subscribe(response => {
-        this.userResult = response;
+        this.userScore = response;
       });
   }
 
@@ -37,9 +39,22 @@ export class QuizService {
         this.score++;
       }
     }
-    return (this.userResult = {
+    return (this.userScore = {
       username: this.username,
       score: this.score
+    });
+  }
+
+  getResults(form: object, questions: any, username: string): any {
+    this.username = username;
+
+    for (let i = 0; i < questions.length; i++) {
+      this.answers = questions[i].answer;
+    }
+
+    return (this.userResult = {
+      username: this.username,
+      answers: this.answers
     });
   }
 
