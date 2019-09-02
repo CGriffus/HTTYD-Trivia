@@ -10,8 +10,7 @@ export class QuizService {
   score: number = 0;
   username: string;
   userScore: object;
-  userResult: object;
-  answers: any;
+  questions: any[] = [];
 
   constructor(private http: HttpClient, private router: Router) {}
 
@@ -45,17 +44,19 @@ export class QuizService {
     });
   }
 
-  getResults(form: object, questions: any, username: string): any {
-    this.username = username;
-
+  getResults(questions: any): any {
     for (let i = 0; i < questions.length; i++) {
-      this.answers = questions[i].answer;
+      this.questions.push(questions[i]);
     }
+    return this.questions;
+  }
 
-    return (this.userResult = {
-      username: this.username,
-      answers: this.answers
-    });
+  sendQuestions() {
+    return this.questions;
+  }
+
+  sendScore(): any {
+    return this.userScore;
   }
 
   showResults() {

@@ -1,8 +1,4 @@
 #main {
-  background-image: linear-gradient(rgba(5, 5, 5, 0.45), rgba(5, 5, 5, 0.45)),
-    url(../../assets/bg-img3.jpg);
-  background-repeat: no-repeat;
-  background-size: cover;
   position: relative;
   display: flex;
   flex-direction: column;
@@ -20,6 +16,7 @@
 
 #username_input {
   padding: 10px;
+  border-radius: 20px;
 }
 
 form {
@@ -51,4 +48,5 @@ button {
   font-size: 20px;
   border: none;
   margin: 20px 0 0 0;
+  border-radius: 20px;
 }

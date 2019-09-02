@@ -1,1 +1,13 @@
-<p>results works!</p>
+<div>
+  <div class="userDiv" *ngFor="let user of userScore">
+    <h1>{{ user.username }}</h1>
+    <h1>Score: {{ user.score }}</h1>
+  </div>
+  <h2>Correct Answers</h2>
+  <ol>
+    <li *ngFor="let question of questions">
+      <p>{{ question.question_name }}</p>
+      <p>Answer: {{ question.answer }}</p>
+    </li>
+  </ol>
+</div>

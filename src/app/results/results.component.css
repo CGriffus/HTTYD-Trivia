@@ -1,13 +1,27 @@
 div {
-  background-image: linear-gradient(
-      rgba(39, 34, 34, 0.45),
-      rgba(39, 34, 34, 0.45)
-    ),
-    url(../../assets/bg-img2.jpg);
-  background-repeat: no-repeat;
-  background-size: cover;
   position: relative;
   display: flex;
   flex-direction: column;
   align-items: center;
+  text-align: center;
+  margin: 20px;
+  color: white;
+  text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
+}
+
+.userDiv {
+  flex-direction: row;
+}
+
+.userDiv h1 {
+  margin: 15px;
+}
+
+ol {
+  text-align: left;
+  font-size: 20px;
+}
+
+li p {
+  margin: 20px 0 10px 2px;
 }

@@ -2,8 +2,9 @@ header {
   display: flex;
   flex-direction: column;
   align-items: center;
+  justify-content: space-between;
   position: relative;
-  background: rgb(14, 13, 13);
+  background: rgba(14, 13, 13, 0.7);
 }
 
 h1 {
@@ -11,16 +12,15 @@ h1 {
   font-size: 40px;
   text-shadow: 0 1px white, 1px 0 white;
   position: absolute;
-  top: 42%;
+  top: 35%;
 }
 
 #logo {
-  margin-top: 10px;
   width: 18%;
 }
 
 nav {
-  margin-top: 35px;
+  margin: 35px 0 5px 0;
 }
 
 a {
@@ -28,4 +28,10 @@ a {
   font-size: 30px;
   margin: 10px;
   color: white;
+  padding: 0 10px;
+  border-radius: 20px;
+}
+
+.active {
+  background: rgba(231, 4, 4, 0.6);
 }
