@@ -62,4 +62,8 @@ export class QuizService {
   showResults() {
     this.router.navigate(["results"]);
   }
+
+  showScores() {
+    this.router.navigate(["scores"])
+  }
 }

@@ -17,4 +17,8 @@ export class ResultsComponent implements OnInit {
     this.userScore.push(this.quizService.sendScore());
     console.log(this.questions);
   }
+
+  showScores() {
+    this.quizService.showScores();
+  }
 }
