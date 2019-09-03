@@ -1,8 +1,9 @@
 <div>
+  <h1>High Scores</h1>
   <ol>
     <li *ngFor="let score of scores">
-      <p>{{ score.username }}</p>
-      <p>{{ score.score }}</p>
+      <p>Name: {{ score.username }}</p>
+      <p>Score: {{ score.score }}</p>
     </li>
   </ol>
 </div>

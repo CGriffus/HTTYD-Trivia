@@ -26,7 +26,7 @@ export class QuizComponent implements OnInit {
       form.value.username
     );
 
-    // this.quizService.postScores(this.userScore);
+    this.quizService.postScores(this.userScore);
 
     this.quizService.getResults(this.questions);
 

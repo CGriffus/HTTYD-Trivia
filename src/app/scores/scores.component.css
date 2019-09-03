@@ -3,9 +3,21 @@ div {
   display: flex;
   flex-direction: column;
   align-items: center;
-  height: 100vh;
+  color: white;
+  text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
+  margin-bottom: 20px;
 }
 
-li {
-  color: white;
+h1 {
+  color: rgb(224, 33, 33);
+  margin-top: 30px;
+}
+
+ol {
+  text-align: left;
+  font-size: 20px;
+}
+
+li p {
+  margin: 20px 0 10px 2px;
 }
